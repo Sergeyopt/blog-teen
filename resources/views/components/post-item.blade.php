@@ -1,6 +1,6 @@
 <div class="property-card news-card card">
     <div class="property-card-header image-box">
-        <img src="/storage/{{ $post->thumbnail }}" alt="" class="" />
+        <img src="{{ $post->startsWith() }}" alt="" class="" />
     </div>
     <div class="property-card-tasm">
         <div class="pull-left item-t">

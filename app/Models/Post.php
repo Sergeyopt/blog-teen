@@ -50,4 +50,13 @@ class Post extends Model
     {
         return $this->published_at->format('d ' . 'F' . ' y');
     }
+
+    public function startsWith()
+    {
+        if (str_starts_with($this->thumbnail, 'http'))
+        {
+            return $this->thumbnail;
+        }
+        return '/storage/' . $this->thumbnail;
+    }
 }
