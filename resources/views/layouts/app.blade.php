@@ -58,7 +58,7 @@
                 <section class="header-inner">
                     <div class="container">
                         <div class="logo pull-left pull-sm-up col-sm-6 col-xs-12  text-left">
-                            <a href="index.html">
+                            <a href="{{ route('home') }}">
                                 <img src="{{ asset( 'assets/img/placeholders/250x75.png') }}" alt="" />
                                 <img src="{{ asset( 'assets/img/placeholders/80x80.png') }}" alt="" class="mini-logo" />
                             </a>
@@ -118,53 +118,6 @@
                                                 <a class="dropdown-item" href="#!">Basic shop</a>
                                             </div>
                                         </li>
-                                        <li class="nav-item dropdown dropdown-mega">
-                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                                Featured
-                                                <i class="icon-dropdown"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-property">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <div class="property-card card">
-                                                                <div class="property-card-header image-box">
-                                                                    <img src="assets/img/placeholders/395x250.png" alt="" class="" />
-                                                                    <a href="listing.html" class="property-card-hover">
-                                                                        <img src="assets/img/property-hover-arrow.png" alt="" class="left-icon" />
-                                                                        <img src="assets/img/plus.png" alt="" class="center-icon" />
-                                                                        <img src="assets/img/icon-notice.png" alt="" class="right-icon" />
-                                                                    </a>
-                                                                </div>
-                                                                <div class="property-card-tags">
-                                                                    <span class="label label-default label-tag-primary">sale</span>
-                                                                </div>
-                                                                <div class="property-card-box card-box card-block">
-                                                                    <h3 class="property-card-title"><a href="listing.html">Title property</a></h3>
-                                                                    <div class="property-card-descr">This is simply dummy text of the printing and typesetting industry. That has been the industry standard ...</div>
-                                                                    <div class="property-preview-footer  clearfix">
-                                                                        <div class="property-preview-f-left text-color-primary">
-                                                                                    <span class="property-card-value">
-                                                                                        <i class="fa fa-home"></i>House
-                                                                                    </span>
-                                                                            <span class="property-card-value">
-                                                                                        <i class="fa fa-tint"></i>1
-                                                                                    </span>
-                                                                            <span class="property-card-value">
-                                                                                        <i class="fa fa-square-o"></i>200m
-                                                                                    </span>
-                                                                            <span class="property-card-value">
-                                                                                        <i class="fa fa-eur"></i>60 000
-                                                                                    </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
                                     </ul>
                                 </div>
                             </nav>
@@ -187,68 +140,7 @@
     <main class="main main-container section-color-primary">
         <div class="container">
             <div class="row">
-                <div class="col-md-9">
-                    {{ $slot }}
-                </div><!-- /.center-content -->
-                <div class="col-md-3">
-                    <div class="widget widget-search">
-                        <form action="#">
-                            <div class="input-group input-with-search color-primary clearfix">
-                                <input type="text" value="" class="form-control" placeholder="SEARCH"/>
-                                <button type="submit" class="input-group-addon"><i class='fa fa-search icon-white'></i></button>
-                            </div>
-                        </form>
-                    </div><!-- /.widget-search-->
-                    <div class="widget widget-menu-right">
-                        <div id="menu-right">
-                            <div class="list-group panel text-color-primary border-color-primary">
-                                <a href="#home" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#menu-right">Slider</a>
-                                <div class="collapse" id="home">
-                                    <a class="list-group-item" href="slider_standard.html">Standard</a>
-                                    <a class="list-group-item" href="index_headervideo.html">Video</a>
-                                    <a class="list-group-item" href="index_fullscreenslider.html">Full Screen</a>
-                                </div>
-                                <a href="#home-map" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#menu-right">Map</a>
-                                <div class="collapse" id="home-map">
-                                    <a class="list-group-item" href="map.html">Grid results</a>
-                                    <a class="list-group-item" href="map_list.html">List result</a>
-                                    <a class="list-group-item" href="map_side.html">Side version</a>
-                                    <a class="list-group-item" href="map_side_list.html">Side version list</a>
-                                    <a class="list-group-item" href="map_geo.html?geolocation=paris">Geo regions</a>
-                                </div>
-                                <a href="#about" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#menu-right">Categories</a>
-                                <div class="collapse" id="about">
-                                    <a class="list-group-item" href="map_side2.html">Real Estate</a>
-                                    <a class="list-group-item" href="index_yacht.html">Yacht Market</a>
-                                    <a class="list-group-item" href="index_car.html">Car Dealer</a>
-                                    <a class="list-group-item" href="index_job.html">Job Finder</a>
-                                    <a class="list-group-item" href="map_business.html">Business Directory</a>
-                                    <a class="list-group-item" href="index_classfied.html">Classified Portal</a>
-                                    <a class="list-group-item" href="index_shop.html">Basic shop</a>
-                                </div>
-                                <a href="#pages" class="list-group-item list-group-item-success active" data-toggle="collapse" data-parent="#menu-right">Pages</a>
-                                <div class="collapse" id="pages">
-                                    <a class="list-group-item" href="page_gallery.html">Basic with Gallery</a>
-                                    <a class="list-group-item" href="login.html">Login</a>
-                                    <a class="list-group-item" href="mylistings.html">My Listings</a>
-                                    <a class="list-group-item" href="listing.html">Listing Preview</a>
-                                    <a class="list-group-item" href="ask_expert.html">FAQ</a>
-                                    <a class="list-group-item" href="agents.html">Agents</a>
-                                    <a class="list-group-item" href="profile.html">Agent Profile</a>
-                                    <a class="list-group-item active" href="blog.html">Blog List</a>
-                                    <a class="list-group-item" href="page_cart.html">Cart</a>
-                                    <a class="list-group-item" href="component_alerts.html">Components</a>
-                                    <a class="list-group-item" href="page_invoice.html">Invoice</a>
-                                    <a class="list-group-item" href="contact.html">Contact</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- /.widget-search-->
-                    <div class="widget widget-ads-right">
-                        <img src="{{ asset('assets/img/placeholders/265x220.png') }}" alt="" class="center-block" />
-                    </div><!-- /.widget-ads-->
-                </div>
-                <!-- /.right side bar -->
+                {{ $slot }}
             </div>
         </div>
     </main><!-- /.main-part-->

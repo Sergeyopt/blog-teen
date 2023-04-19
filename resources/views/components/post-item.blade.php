@@ -1,6 +1,8 @@
 <div class="property-card news-card card">
     <div class="property-card-header image-box">
-        <img src="{{ $post->startsWith() }}" alt="" class="" />
+        <a href="{{ route('view', $post) }}">
+            <img src="{{ $post->startsWith() }}" alt="" class="" />
+        </a>
     </div>
     <div class="property-card-tasm">
         <div class="pull-left item-t">
@@ -23,7 +25,7 @@
     </div>
     <div class="property-card-box card-box card-block">
         <h3 class="property-card-title">
-            <a href="page_gallery.html">{{ $post->title }}</a>
+            <a href="{{ route('view', $post) }}">{{ $post->title }}</a>
         </h3>
         <div class="property-card-descr">{!! $post->formatDescription() !!}</div>
     </div>
