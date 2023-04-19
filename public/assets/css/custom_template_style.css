@@ -6,7 +6,7 @@ body .menu .dropdown-item.active,
 body .color-primary,
 .agents-corousel-item .agent-details .mail:hover,
 .property-card .property-card-box .property-card-title a:hover,
-.menu .nav >.nav-item .nav-link:hover, 
+.menu .nav >.nav-item .nav-link:hover,
 .menu .active .nav-link,
 .menu .nav-link.active,
 .treefield-categories .treefield-box-item:hover,
@@ -21,8 +21,8 @@ body .border-color-primary {
 }
 
 .news:not(.section-parallax) .card .title a,
-.property-card .property-card-box .property-card-title, 
-.property-card .property-card-box .property-card-title a, 
+.property-card .property-card-box .property-card-title,
+.property-card .property-card-box .property-card-title a,
 .agents-corousel-item .agent-details .mail,
 body .text-color-primary {
     color: #0f7ad5 ;
@@ -37,7 +37,7 @@ body .pagination-carousel li.active a,
 .header .top-bar .pull-right,
 body .color-secondary,
 body .btn.color-secondary {
-    background-color: #004790;
+    background-color: #004790 !important;
 }
 
 body .border-color-secondary {

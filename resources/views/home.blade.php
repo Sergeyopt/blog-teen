@@ -9,11 +9,7 @@
                 @endforeach
             </div>
             <nav class="text-center">
-                <ul class="pagination">
-                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                </ul>
+                {{ $posts->onEachSide(2)->links() }}
             </nav>
         </div>
     </section>
