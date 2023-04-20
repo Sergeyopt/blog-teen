@@ -882,7 +882,7 @@ body .form-additional.npad {
 }
 
 .box-overflow-container {
-    margin-bottom: 80px;
+    margin-bottom: 10px;
     padding: 40px 25px;
 }
 
@@ -5105,4 +5105,64 @@ body .h-side.top-pad.h-side-slim .grid-type {
 .thumbnail {
     min-width: 100%;
     margin-bottom: 40px;
+}
+
+/* PAGINATE POSTS VIEW */
+
+.navigation-post {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigation-prev {
+    width: 400px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: -5px 10px 10px -12px rgba(0,0,0,0.66);
+    z-index: 2;
+}
+
+.nav-link--prev {
+    
+}
+
+.nav-link--prev h3 {
+    padding: 0;
+    margin: 0;
+    text-align: start;
+    color: #0f7ad5;
+}
+
+.nav-link--prev p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+    word-wrap: break-word;
+}
+
+.navigation-next {
+    width: 400px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: -5px 10px 10px -12px rgba(0,0,0,0.66);
+    z-index: 2;
+}
+
+.nav-link--next {
+}
+
+.nav-link--next h3 {
+    padding: 0;
+    margin: 0;
+    text-align: end;
+    color: #0f7ad5;
+}
+
+.nav-link--next p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+    word-wrap: break-word;
 }
