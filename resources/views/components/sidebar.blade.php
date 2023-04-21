@@ -2,7 +2,7 @@
     <div id="menu-right">
         <div class="list-group panel text-color-primary border-color-primary">
             @foreach ($categories as $category)
-                <a class="list-group-item" href="{{ route('by-category', $category) }}">{{ $category->title }} <strong>(</strong>{{ $category->total }}<strong>)</strong></a>
+                <a class="list-group-item {{ request('category')?->slug == $category->slug ? 'active' : '' }}" href="{{ route('by-category', $category) }}">{{ $category->title }} <strong>(</strong>{{ $category->total }}<strong>)</strong></a>
             @endforeach
         </div>
     </div>

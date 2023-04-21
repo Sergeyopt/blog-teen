@@ -115,7 +115,7 @@
                                             </a>
                                             <div class="dropdown-menu">
                                                 @foreach ($categories as $category)
-                                                    <a class="dropdown-item" href="{{ route('by-category', $category) }}">{{ $category->title }}</a>
+                                                    <a class="dropdown-item {{ request('category')?->slug == $category->slug ? 'active' : '' }}" href="{{ route('by-category', $category) }}">{{ $category->title }}</a>
                                                 @endforeach
                                             </div>
                                         </li>
