@@ -103,20 +103,26 @@
                                 <!-- Links -->
                                 <div class="collapse navbar-collapse" id="main-menu">
                                     <ul class="nav navbar-nav clearfix">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="">
+                                                Shop
+                                            </a>
+                                        </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                                 Categories
                                                 <i class="icon-dropdown"></i>
                                             </a>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#!">Real Estate</a>
-                                                <a class="dropdown-item" href="#!">Yacht Market</a>
-                                                <a class="dropdown-item" href="#!">Car Dealer</a>
-                                                <a class="dropdown-item" href="#!">Job Finder</a>
-                                                <a class="dropdown-item" href="#!">Business Directory</a>
-                                                <a class="dropdown-item" href="#!">Classified Portal</a>
-                                                <a class="dropdown-item" href="#!">Basic shop</a>
+                                                @foreach ($categories as $category)
+                                                    <a class="dropdown-item" href="{{ route('by-category', $category) }}">{{ $category->title }}</a>
+                                                @endforeach
                                             </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#!">
+                                                About Us
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>

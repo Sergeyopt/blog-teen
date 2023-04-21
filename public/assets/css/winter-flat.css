@@ -2768,6 +2768,8 @@ body > div:not(.container-side-version) .h-side.h-side-results {
 */
 
 .property-card {
+    height: 450px !important;
+    padding: 7px !important;
     border-radius: 0;
     border: 0;
     background: #fff;
@@ -5123,7 +5125,7 @@ body .h-side.top-pad.h-side-slim .grid-type {
 }
 
 .nav-link--prev {
-    
+
 }
 
 .nav-link--prev h3 {

@@ -43,7 +43,7 @@ class Post extends Model
 
     public function formatDescription() : string
     {
-        return Str::words(strip_tags($this->description), 40);
+        return Str::words(strip_tags($this->description), 30, '...');
     }
 
     public function getFormatDate()

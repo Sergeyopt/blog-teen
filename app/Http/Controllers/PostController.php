@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -19,7 +20,7 @@ class PostController extends Controller
             ->where('active', '=', 1)
             ->where('published_at', '<', Carbon::now())
             ->orderBy('published_at', 'DESC')
-            ->paginate(6);
+            ->paginate(10);
         return view('home', compact('posts'));
     }
 
@@ -68,26 +69,19 @@ class PostController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     *
      */
-    public function edit(Post $post)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Post $post)
-    {
-        //
-    }
+     public function byCategory(Category $category)
+     {
+        $posts = Post::query()
+            ->leftJoin('category_post', 'posts.id', '=', 'category_post.post_id')
+            ->where('category_post.category_id', '=', $category->id)
+            ->where('active', '=', true)
+            ->whereDate('published_at', '<=', Carbon::now())
+            ->orderBy('published_at', 'DESC')
+            ->paginate(10);
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Post $post)
-    {
-        //
-    }
+        return view('home', compact('posts'));
+     }
 }

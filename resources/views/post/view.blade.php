@@ -19,11 +19,11 @@
                     <div class="navigation-prev">
                         <a class="nav-link--prev" href="{{ route('view', $prev) }}">
                             <h3>&#10229; Previous</h3>
-                            <p>{{ Str::words($prev->title, 25) }}</p>
+                            <p>{{ Str::words($prev->title, 10, '...') }}</p>
                         </a>
                     </div>
                 @endif
-                @if($next)    
+                @if($next)
                     <div class="navigation-next">
                         <a class="nav-link--next" href="{{ route('view', $next) }}">
                             <h3 class="nav-next-title">Next &#10230;</h3>
@@ -33,7 +33,7 @@
                 @endif
             </div>
         </section>
-        
+
     </div>
     <div class="col-md-3">
         <x-sidebar />
