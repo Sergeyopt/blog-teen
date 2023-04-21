@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout meta-title="Информация о нас" meta-description="Lorem ipsum">
     <div class="col-md-12">
         <section class="widget widget-box widget-section box-container widget-contact-info">
             <div class="widget-header text-uppercase">
@@ -54,6 +54,5 @@
                 </div>
             </form>
         </div>  <!-- /. widget-map  -->
-
     </div><!-- /.center-content -->
 </x-app-layout>

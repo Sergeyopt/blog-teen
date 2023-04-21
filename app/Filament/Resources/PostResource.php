@@ -41,6 +41,8 @@ class PostResource extends Resource
                                 ->required()
                                 ->maxLength(2048),
                         ]),
+                    Forms\Components\TextInput::make('meta_title'),
+                    Forms\Components\TextInput::make('meta_description'),
                     Forms\Components\RichEditor::make('description')
                         ->required(),
                     Forms\Components\Toggle::make('active')

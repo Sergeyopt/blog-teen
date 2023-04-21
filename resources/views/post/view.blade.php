@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout :meta-title="$post->meta_title ? $post->meta_title : $post->title" :meta-description="$post->meta_description">
     <div class="col-md-9">
         <section class="widget widget-overflow wide-p">
             <div class="box-overflow-container box-container">

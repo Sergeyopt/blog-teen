@@ -1,4 +1,4 @@
-<x-app-layout meta-title="Головна" meta-description="Blog Page new site">
+<x-app-layout :meta-title="$category->title" meta-description="Опис категорії">
     <div class="col-md-9">
         <section class="widget-blog-listing">
             <div class="properties">

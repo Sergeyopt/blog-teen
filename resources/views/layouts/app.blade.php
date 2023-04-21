@@ -3,9 +3,9 @@
 <head>
     <meta charset="{{ str_replace('_', '-', app()->getLocale()) }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Blog List</title>
-    <meta name="author" content="" />
-    <meta name="description" content="" />
+    <title>{{ $metaTitle ? $metaTitle : 'Meta Title' }}</title>
+    <meta name="author" content="MySite" />
+    <meta name="description" content="{{ $metaDescription ? $metaDescription : 'Meta Description' }}" />
     <link rel="icon" href="{{ asset('assets/img/favicon.ico') }}" type="image/x-icon" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="{{ asset('assets/libraries/font-awesome/css/font-awesome.min.css') }}" />
@@ -120,7 +120,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#!">
+                                            <a class="nav-link" href="{{ route('about-us') }}">
                                                 About Us
                                             </a>
                                         </li>
